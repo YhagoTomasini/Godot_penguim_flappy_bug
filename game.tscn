@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwojv6u3lc438"]
+
+[ext_resource type="PackedScene" uid="uid://dr5ul55k3cf1b" path="res://character.tscn" id="1_et8ni"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_gx2cq"]
+[ext_resource type="PackedScene" uid="uid://bj5k6pgfgml3y" path="res://chao.tscn" id="3_1hvgr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wr4u0"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_gx2cq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1080, 1080)
+texture = SubResource("CanvasTexture_wr4u0")
+centered = false
+
+[node name="Character" parent="." instance=ExtResource("1_et8ni")]
+
+[node name="Chao" parent="." instance=ExtResource("3_1hvgr")]
+position = Vector2(2, 1016)

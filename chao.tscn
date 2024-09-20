@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj5k6pgfgml3y"]
+
+[ext_resource type="Script" path="res://chao.gd" id="1_dmeli"]
+[ext_resource type="Texture2D" uid="uid://ymeo7n6n786d" path="res://Assets/Cenario_frio/Bloco-de-gelo.png" id="2_u2g3e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg1na"]
+size = Vector2(61.6471, 32)
+
+[node name="Chao" type="Area2D"]
+position = Vector2(0, 1016)
+script = ExtResource("1_dmeli")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(2032, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_u2g3e")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1080, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_u2g3e")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1016, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_u2g3e")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_u2g3e")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1048, 32)
+scale = Vector2(34, 2)
+shape = SubResource("RectangleShape2D_rg1na")
