@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bj5k6pgfgml3y"]
 
-[ext_resource type="Script" path="res://chao.gd" id="1_dmeli"]
+[ext_resource type="Script" path="res://Scripts/chao.gd" id="1_dmeli"]
 [ext_resource type="Texture2D" uid="uid://ymeo7n6n786d" path="res://Assets/Cenario_frio/Bloco-de-gelo.png" id="2_u2g3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg1na"]

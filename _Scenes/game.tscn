@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwojv6u3lc438"]
 
-[ext_resource type="PackedScene" uid="uid://dr5ul55k3cf1b" path="res://character.tscn" id="1_et8ni"]
+[ext_resource type="PackedScene" uid="uid://dr5ul55k3cf1b" path="res://_Scenes/character.tscn" id="1_et8ni"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_gx2cq"]
-[ext_resource type="PackedScene" uid="uid://bj5k6pgfgml3y" path="res://chao.tscn" id="3_1hvgr"]
+[ext_resource type="PackedScene" uid="uid://bj5k6pgfgml3y" path="res://_Scenes/chao.tscn" id="3_1hvgr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_wr4u0"]
 
