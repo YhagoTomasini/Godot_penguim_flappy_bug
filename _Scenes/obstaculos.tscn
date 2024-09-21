@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkejjuxk0k8mn"]
+
+[ext_resource type="Texture2D" uid="uid://0vugwlii27gb" path="res://Assets/Cenario_frio/Bloco-de-code.png" id="1_fvxve"]
+[ext_resource type="Script" path="res://Scripts/obstaculos.gd" id="1_xr4g0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6yaj"]
+size = Vector2(32, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84h3w"]
+size = Vector2(32, 288)
+
+[node name="obstaculos" type="Area2D" groups=["Obs"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_xr4g0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -256)
+shape = SubResource("RectangleShape2D_i6yaj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -32)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -64)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -96)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -128)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -160)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -192)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -224)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(0, -256)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, -128)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 256)
+shape = SubResource("RectangleShape2D_84h3w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 32)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 64)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 96)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 128)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 160)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 192)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 224)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 256)
+texture = ExtResource("1_fvxve")
+offset = Vector2(0, 128)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

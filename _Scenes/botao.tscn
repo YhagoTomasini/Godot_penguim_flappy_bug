@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjb3vfw1c7wey"]
+
+[ext_resource type="Script" path="res://Scripts/botao.gd" id="1_xqt1x"]
+[ext_resource type="Texture2D" uid="uid://b0rqcst8epybo" path="res://Assets/Layer 1.png" id="2_wd0ch"]
+
+[node name="botao" type="CanvasLayer"]
+script = ExtResource("1_xqt1x")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 301.0
+offset_top = 629.0
+offset_right = 677.0
+offset_bottom = 761.0
+icon = ExtResource("2_wd0ch")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

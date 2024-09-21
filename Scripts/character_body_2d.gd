@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const GRAVITY : int = 1000
-const MAX_SPEED : int = 300
+const MAX_SPEED : int = 1000
 const JUMP_VELOCITY : int = -500
 var flying : bool = false
 var falling : bool = false

@@ -1,20 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwojv6u3lc438"]
+[gd_scene load_steps=7 format=3 uid="uid://dwojv6u3lc438"]
 
 [ext_resource type="PackedScene" uid="uid://dr5ul55k3cf1b" path="res://_Scenes/character.tscn" id="1_et8ni"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_gx2cq"]
+[ext_resource type="PackedScene" uid="uid://dkejjuxk0k8mn" path="res://_Scenes/obstaculos.tscn" id="2_8x1o6"]
+[ext_resource type="Texture2D" uid="uid://bv8prkd5jamel" path="res://Assets/Cenario_frio/Fundo.png" id="2_pe4la"]
 [ext_resource type="PackedScene" uid="uid://bj5k6pgfgml3y" path="res://_Scenes/chao.tscn" id="3_1hvgr"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_wr4u0"]
+[ext_resource type="PackedScene" uid="uid://cjb3vfw1c7wey" path="res://_Scenes/botao.tscn" id="6_077g2"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gx2cq")
+obstaculo_scene = ExtResource("2_8x1o6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1080, 1080)
-texture = SubResource("CanvasTexture_wr4u0")
+scale = Vector2(2.47917, 1.0625)
+texture = ExtResource("2_pe4la")
 centered = false
 
 [node name="Character" parent="." instance=ExtResource("1_et8ni")]
+position = Vector2(107, 121)
 
 [node name="Chao" parent="." instance=ExtResource("3_1hvgr")]
-position = Vector2(2, 1016)
+z_index = 1
+
+[node name="TimerdoObstaculo" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="botao" parent="." instance=ExtResource("6_077g2")]
+
+[connection signal="hit" from="Chao" to="." method="_on_chao_hit"]
+[connection signal="timeout" from="TimerdoObstaculo" to="." method="_on_timerdo_obstaculo_timeout"]
+[connection signal="restart" from="botao" to="." method="_on_botao_restart"]
